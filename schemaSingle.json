@@ -1,0 +1,64 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "[homeUrl]#website",
+      "url": "[homeUrl]",
+      "name": "[sitename]",
+      "description": "",
+      "inLanguage": "fr-FR"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "[url]#primaryimage",
+      "inLanguage": "fr-FR",
+      "url": "[image]",
+      "contentUrl": "[image]",
+      "width": "[width]",
+      "height": "[height]"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "[url]#webpage",
+      "url": "[url]",
+      "name": "[titre]",
+      "isPartOf": {
+        "@id": "[homeUrl]#website"
+      },
+      "primaryImageOfPage": {
+        "@id": "[url]#primaryimage"
+      },
+      "datePublished": "[date]",
+      "breadcrumb": {
+        "@id": "[url]#breadcrumb"
+      },
+      "inLanguage": "fr-FR",
+      "potentialAction": [
+        {
+          "@type": "ReadAction",
+          "target": [
+            "[url]"
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "[url]#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "[postType]",
+          "item": "[archiveUrl]"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "[titre]"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "[url]#website",
+      "url": "[url]",
+      "name": "[sitename]",
+      "description": "",
+      "inLanguage": "fr-FR"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "[url]#webpage",
+      "url": "[url]",
+      "name": "[titre]",
+      "isPartOf": {
+        "@id": "[url]#website"
+      },
+      "datePublished": "2021-10-12T10:02:31+00:00",
+      "description": "[description]",
+      "breadcrumb": {
+        "@id": "[url]#breadcrumb"
+      },
+      "inLanguage": "fr-FR",
+      "potentialAction": [
+        {
+          "@type": "ReadAction",
+          "target": [
+            "[url]"
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "[url]#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "[titre]"
+        }
+      ]
+    }
+  ]
+}
